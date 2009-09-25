@@ -62,40 +62,40 @@ class AboutArrays < EdgeCase::Koan
     array = [1,2]
     array.push(:last)
 
-    assert_equal __, array
+    assert_equal [1,2,:last], array
 
     popped_value = array.pop
-    assert_equal __, popped_value
-    assert_equal __, array
+    assert_equal :"last", popped_value
+    assert_equal [1,2], array
   end
 
   def test_shifting_arrays
     array = [1,2]
     array.unshift(:first)
 
-    assert_equal __, array
+    assert_equal [:first,1,2], array
 
     shifted_value = array.shift
-    assert_equal __, shifted_value
-    assert_equal __, array
+    assert_equal :"first", shifted_value
+    assert_equal [1,2], array
   end
 
   def test_parallel_assignments
     first_name, last_name = ["John", "Smith"]
-    assert_equal __, first_name
-    assert_equal __, last_name
+    assert_equal "John", first_name
+    assert_equal "Smith", last_name
   end
 
   def test_parallel_assignments_with_extra_values
     first_name, last_name = ["John", "Smith", "III"]
-    assert_equal __, first_name
-    assert_equal __, last_name
+    assert_equal "John", first_name
+    assert_equal "Smith", last_name
   end
 
   def test_parallel_assignments_with_extra_variables
     first_name, last_name = ["Cher"]
-    assert_equal __, first_name
-    assert_equal __, last_name
+    assert_equal "Cher", first_name
+    assert_equal nil, last_name
   end
 
 end
