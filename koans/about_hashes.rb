@@ -26,7 +26,7 @@ class AboutHashes < EdgeCase::Koan
 
     expected = { :one => "eins", :two => "dos" }
     assert_equal expected, hash
-
+    
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
   end
@@ -39,9 +39,9 @@ class AboutHashes < EdgeCase::Koan
   end
 
   def test_hash_keys_and_values
-    hash = { :one => "uno", :two => "dos" }
-    assert_equal [:one,:two], hash.keys
-    assert_equal ["uno", "dos"], hash.values
+    hash = {:one => "uno", :two => "dos"}
+    assert_equal [:two,:one], hash.keys
+    assert_equal ["dos", "uno"], hash.values
   end
 
   def test_combining_hashes
